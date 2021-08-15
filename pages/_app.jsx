@@ -1,9 +1,10 @@
 import React from 'react';
-import ThemeProvider from '../theme';
+import {ThemeProvider} from 'theme-ui';
+import theme from '../theme';
 
 export default function App({ Component, pageProps }) {
     return (
-        <ThemeProvider>
+        <ThemeProvider theme={theme}>
             <Component {...pageProps} />
         </ThemeProvider>
     );
