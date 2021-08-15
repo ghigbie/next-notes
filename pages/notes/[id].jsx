@@ -1,11 +1,18 @@
 import React from 'react';
-import { useRouter } from 'next/router' 
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
-const Page = () => {
+export default () => {
     const router = useRouter();
     const {id} =  router.query;
 
-    return(<div>Note Index Page {id}</div>)
+    return(
+        <div>
+            <h1>Note: {id}</h1>
+            <p>This is note {id}</p>
+            <Link href="/notes">
+                <a>Notes</a>
+            </Link>
+        </div>
+    );
 }
-
-export default Page;
